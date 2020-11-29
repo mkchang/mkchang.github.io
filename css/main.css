@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+.WebGazer__VideoPlaceholder {
+    border: 1px solid black;
+    display: inline-block;
+    height: 240px;
+    width: 320px;
+}
+
+.Board .Tile {
+    font-size: 64px;
+    height: 45vh;
+    margin: 50px;
+    width: calc(50% - 150px);
+}
+
+.Board .Tile img {
+    height: 100%;
+    width: 100%;
+}
