@@ -2,23 +2,26 @@ body {
     margin: 0;
 }
 
+.WebGazer {
+    display: flex;
+}
+
 .WebGazer__VideoPlaceholder {
     border: 1px solid black;
-    display: inline-block;
     height: 240px;
     width: 320px;
 }
 
-.WebGazer__Controls {
-    
-    display: inline-block;
+.WebGazer__Controls button {
+    font-size: 24px;
+    padding: 16px;
 }
 
 .Board .Tile {
     font-size: 64px;
     height: 45vh;
     margin: 50px;
-    width: calc(50% - 150px);
+    width: calc(50% - 110px);
 }
 
 .Board .Tile img {
