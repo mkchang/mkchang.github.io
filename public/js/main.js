@@ -11,8 +11,8 @@ window.onload = async function() {
                 // if (data == null) {
                 //     return;
                 // }
-            }).begin()
-            .showPredictionPoints(true);
+            }).begin();
+            webgazer.showPredictionPoints(true);
             state.webGazerOn = true;
         }
     });
@@ -22,6 +22,8 @@ window.onload = async function() {
             webgazer.pause();
             webgazer.stopVideo();
             webgazer.showPredictionPoints(false);
+            var gazeDot = document.getElementById('webgazerGazeDot');
+            gazeDot && gazeDot.remove();
             webgazer.end();
             state.webGazerOn = false;
         }
