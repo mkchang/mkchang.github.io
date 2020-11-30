@@ -21,6 +21,7 @@ body {
     font-size: 64px;
     height: 45vh;
     margin: 50px;
+    padding: 6px;
     width: calc(50% - 110px);
 }
 
@@ -35,4 +36,9 @@ body {
 
 .Board .Tile.No {
     background-color: #fdb5b5;
+}
+
+.Board .Tile.active {
+    border: 8px solid red;
+    padding: 0;
 }
