@@ -56,6 +56,10 @@ $(document).ready(function(){
         $(this).css('background-color','yellow');
         $(this).prop('disabled', true); //disables the button
         PointCalibrate++;
+        $(`#Pt${PointCalibrate}`).hide();
+        if (PointCalibrate<9) {
+          $(`#Pt${PointCalibrate + 1}`).show();
+        }
       }else if (CalibrationPoints[id]<5){
         //Gradually increase the opacity of calibration points when click to give some indication to user.
         var opacity = 0.2*CalibrationPoints[id]+0.2;
@@ -63,9 +67,9 @@ $(document).ready(function(){
       }
 
       //Show the middle calibration point after all other points have been clicked.
-      if (PointCalibrate == 8){
-        $("#Pt5").show();
-      }
+      // if (PointCalibrate == 8){
+      //   $("#Pt5").show();
+      // }
 
       if (PointCalibrate >= 9){ // last point is calibrated
             ClearCanvas();
@@ -77,8 +81,9 @@ $(document).ready(function(){
  * Show the Calibration Points
  */
 function ShowCalibrationPoint() {
-  $(".Calibration").show();
-  $("#Pt5").hide(); // initially hides the middle button
+  // $(".Calibration").show();
+  // $("#Pt5").hide(); // initially hides the middle button
+  $("#Pt1").show(); // show first point
 }
 
 /**
